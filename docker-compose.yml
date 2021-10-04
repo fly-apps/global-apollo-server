@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:10.12-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5455:5432
+    volumes:
+      - global_apollo_server_data:/var/lib/postgresql/data
+    command: -c default_transaction_read_only=on
+volumes:
+  global_apollo_server_data:
