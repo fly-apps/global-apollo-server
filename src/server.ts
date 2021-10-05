@@ -7,7 +7,7 @@ import FlyPlugin from './fly_plugin'
 const server = new ApolloServer({
   schema: schema,
   context: context,
-  plugins: [FlyPlugin({})]
+  plugins: [FlyPlugin]
 })
 
 server.listen().then(async ({ url }) => {

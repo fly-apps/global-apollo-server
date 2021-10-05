@@ -1,0 +1,12 @@
+{
+  "query": "mutation SignupUserMutation($signupUserData: UserCreateInput!) {
+  signupUser(data: $signupUserData) {
+    id
+  }
+}",
+  "variables": {
+    "signupUserData": {
+      "email": "test@test.com"
+    }
+  }
+}
